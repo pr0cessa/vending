@@ -75,5 +75,41 @@ Testing:
     X-Coins: 2
     ETag: W/"8c-Q+SJP7O74uI8DTAnM3vHSAunBQs"
     Date: Thu, 14 Feb 2019 03:46:07 GMT
-    Connection: keep-alive
+    Connection: keep-alive​
+80
+    C. Successful purchase - response:
+81
+​
+82
+    HTTP/1.1 200 OK
+83
+    X-Powered-By: Express
+84
+    X-Inventory-Remaning: 4
+85
+    X-Coins: 0
+86
+    Content-Type: application/json; charset=utf-8
+87
+    Content-Length: 58
+88
+    ETag: W/"3a-vTpgDMHkCdDn+T/nP2UBxduDUp0"
+89
+    Date: Fri, 15 Feb 2019 18:01:34 GMT
+90
+    Connection: keep-alive
+91
+    {"status_message":"inventory PUT request by ID","data":{}}
 
+    C. Successful purchase - response:
+
+    HTTP/1.1 200 OK
+    X-Powered-By: Express
+    X-Inventory-Remaning: 4
+    X-Coins: 0
+    Content-Type: application/json; charset=utf-8
+    Content-Length: 58
+    ETag: W/"3a-vTpgDMHkCdDn+T/nP2UBxduDUp0"
+    Date: Fri, 15 Feb 2019 18:01:34 GMT
+    Connection: keep-alive
+    {"status_message":"inventory PUT request by ID","data":{}}
