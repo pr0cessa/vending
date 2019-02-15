@@ -1,0 +1,26 @@
+{
+"products" : [{
+        "name": "Crystal Pepsi",
+        "id" : 1,
+        "code" : "A1",
+        "quantity" : 5,
+        "price": 50,
+        "quarters" : 10
+    },{
+        "name": "SmartWater",
+        "code" : "A2",        
+        "id" : 2,
+        "quantity" : 5,
+        "price": 50,
+        "quarters" : 10
+    },{
+        "name": "V8",
+        "id" : 3,
+        "code" : "A3",        
+        "quantity" : 5,
+        "price": 50,
+        "quarters" : 10
+    }],
+"coinsAccepted" : 0,
+"productsPurchased": 0    
+}

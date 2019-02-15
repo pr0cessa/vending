@@ -1,0 +1,17 @@
+{
+  "name": "vending",
+  "version": "1.0.0",
+  "description": "vending machine api",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "express": "^4.16.4",
+    "node-path": "0.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "laura",
+  "license": "ISC"
+}
