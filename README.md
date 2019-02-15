@@ -3,7 +3,21 @@ campaign monitor code test
 
 Testing:
 
-1. curl -i -X PUT -H "Content-Type: application/json" -d '{"coin":1}' http://localhost:3000/
+1. curl -i -X GET  http://localhost:3000/inventory/3
+
+    A. get product/quantity By ID
+
+    HTTP/1.1 200 OK
+    X-Powered-By: Express
+    Content-Type: application/json; charset=utf-8
+    Content-Length: 154
+    ETag: W/"9a-j9CSLoY6qFpgWXpjz1zbss7cjBM"
+    Date: Fri, 15 Feb 2019 17:46:33 GMT
+    Connection: keep-alive
+    {"status":200,"status_message":"Success Fetching Inventory Product by ID","data":[{"name":"V8","id":3,"code":"A3","quantity":5,"price":50,"quarters":10}]}
+
+
+2. curl -i -X PUT -H "Content-Type: application/json" -d '{"coin":1}' http://localhost:3000/
 
     A. add a coin - response: 
 
@@ -15,7 +29,7 @@ Testing:
     Connection: keep-alive
 
 
-2. curl -i -X PUT  http://localhost:3000/inventory/3
+3. curl -i -X PUT  http://localhost:3000/inventory/3
 
     A. Not enough money - response:
 
