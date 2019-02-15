@@ -28,8 +28,19 @@ Testing:
     Date: Fri, 15 Feb 2019 17:25:03 GMT
     Connection: keep-alive
 
+3. curl -i -X DELETE  http://localhost:3000/
 
-3. curl -i -X PUT  http://localhost:3000/inventory/3
+    A. Return coins - response:
+
+    HTTP/1.1 204 No Content
+    X-Powered-By: Express
+    X-Coins: 1
+    ETag: W/"2e-uryznfjicgQIJP3Untu+L1E/R90"
+    Date: Fri, 15 Feb 2019 17:53:54 GMT
+    Connection: keep-alive
+
+
+4. curl -i -X PUT  http://localhost:3000/inventory/3
 
     A. Not enough money - response:
 
