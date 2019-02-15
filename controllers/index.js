@@ -62,8 +62,7 @@ var self = module.exports = {
                 status = 403;
             }
             res.setHeader('X-Coins', xCoins);
-			res.send({
-				status : status,
+            res.status(status).send({
 				status_message : "Put/Purchase Product by ID",
 				data : data
 			});
@@ -81,8 +80,7 @@ var self = module.exports = {
         }
         console.log('coinsAccepted updated: '+config.coinsAccepted);
 		res.setHeader('X-Coins', xCoins);
-        res.send({
-            status : 204,
+        res.status(204).send({
             status_message : "Accepted Coin ",
             data : data
         });
@@ -102,8 +100,7 @@ var self = module.exports = {
         
         console.log('Returning all coins... coinsaccepted updated: '+config.coinsAccepted);
 		res.setHeader('X-Coins', xCoins);
-        res.send({
-            status : 204,
+        res.status(204).send({
             status_message : "Returned coins ",
             data : data
         });
