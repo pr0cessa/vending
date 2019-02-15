@@ -51,8 +51,10 @@ var self = module.exports = {
                     }
                 } 
                 config.productsPurchased +=1;
-                res.setHeader('X-Inventory-Remaning', xInventoryRemaining);
-            }
+                config.coinsAccepted -= 2;
+                var change = config.coinsAccepted;    
+                xCoins = change;            
+                res.setHeader('X-Inventory-Remaning', xInventoryRemaining);            }
             else if(quantity <=0){
                 //out of stock
                 status = 404;
@@ -90,21 +92,16 @@ var self = module.exports = {
     },
     
     returnCoin : function(req, res, next)	{
-        var xCoins = 0;
-        var coinsNeeded = config.productsPurchased * 2;
-        var change = config.coinsAccepted - coinsNeeded;
-        if(change > 0){
-            xCoins = change;
-        }
-
+        var xCoins = config.coinsAccepted;
+        var returnData = {};
         config.coinsAccepted = 0;
         config.productsPurchased = 0;
         
-        console.log('Returning all coins... coinsaccepted updated: '+config.coinsAccepted);
+        console.log('Returning all coins...');
 		res.setHeader('X-Coins', xCoins);
         res.status(204).send({
             status_message : "Returned coins ",
-            data : data
+            data : returnData
         });
 	}   
 }
