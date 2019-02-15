@@ -69,10 +69,11 @@ var self = module.exports = {
 			});
 		})
     },
-    
+
 	putCoin : function(req, res, next)	{
         var request = req.body;
         var xCoins = 0;
+        var returnData = {};
         if(typeof(request.coin)=='undefined'||request.coin<=0){
         }
         else {
@@ -83,7 +84,7 @@ var self = module.exports = {
 		res.setHeader('X-Coins', xCoins);
         res.status(204).send({
             status_message : "Accepted Coin ",
-            data : data
+            data : returnData
         });
 		
     },

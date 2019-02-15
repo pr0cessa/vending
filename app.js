@@ -1,6 +1,9 @@
 var express = require("express");
 var routes = require('./routes/index');
+var bodyParser = require('body-parser');
 var app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', routes);
 
 var http = require('http');
