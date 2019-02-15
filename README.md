@@ -39,8 +39,21 @@ Testing:
     Date: Fri, 15 Feb 2019 17:53:54 GMT
     Connection: keep-alive
 
+4. curl -i -X GET  http://localhost:3000/inventory
 
-4. curl -i -X PUT  http://localhost:3000/inventory/3
+    A. get all product quantities
+
+    HTTP/1.1 200 OK
+    X-Powered-By: Express
+    Content-Type: application/json; charset=utf-8
+    Content-Length: 300
+    ETag: W/"12c-Fo9rIa4t/12mSEaW0gO18FWz7Vg"
+    Date: Fri, 15 Feb 2019 17:57:18 GMT
+    Connection: keep-alive
+    {"status":200,"status_message":"Success Listing Inventory","data":[{"name":"Crystal Pepsi","id":1,"code":"A1","quantity":5,"price":50,"quarters":10},{"name":"SmartWater","code":"A2","id":2,"quantity":5,"price":50,"quarters":10},{"name":"V8","id":3,"code":"A3","quantity":5,"price":50,"quarters":10}]}
+
+
+5. curl -i -X PUT  http://localhost:3000/inventory/3
 
     A. Not enough money - response:
 
