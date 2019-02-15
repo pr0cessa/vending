@@ -29,6 +29,7 @@ var self = module.exports = {
         var xCoins = 0;
         var xInventoryRemaining = 0;
         var quantityVended = 0;
+        var returnData = {};
         if(config.coinsAccepted<2){
             xCoins = 2 - config.coinsAccepted;
         }
@@ -55,16 +56,16 @@ var self = module.exports = {
             else if(quantity <=0){
                 //out of stock
                 status = 404;
-
             }
             else if (quantity > 0 && xCoins>0){
                 //produxt in stock, but not enough funds added
                 status = 403;
+                returnData["quantity"] = quantityVended;              
             }
             res.setHeader('X-Coins', xCoins);
             res.status(status).send({
-				status_message : "Put/Purchase Product by ID",
-				data : data
+				status_message : "inventory PUT request by ID",
+				data : returnData
 			});
 		})
     },
