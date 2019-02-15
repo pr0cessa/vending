@@ -1,5 +1,5 @@
 # vending
-campaign monitor code test
+Code challenge
 
 Testing:
 
